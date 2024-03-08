@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Map -Maiko Matsuoka-</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="js/init.js"></script>
+    <script type="module" src="js/map.js" async defer></script>
+    <script type="module" src="js/geolocation.js" async defer></script>
+    <script type="module" src="js/direction.js" async defer></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAOKsQNZ3FsAta_dB9UhkrUv93M9_Xc3jA&callback=initPage" async defer></script>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <a id="montroyal" href="">Mont Royal</a>
+            <a id="geolocation" href="">Your location</a>
+            <a id="direction" href="">Direction</a>
+        </nav>
+    </header>
+
+    <main>
+        <section id="location">
+            <h1>Map</h1>
+            <h3>- Maiko Matsuoka -</h3>
+            <a id="montroyalLink">See where Mont Royal is </a>
+            <a id="geolocationLink">See where you are</a>
+            <a id="directionLink">See direction</a>
+            <h2>Mont Royal</h2>
+        </section>
+        <article id="map"></article>
+    </main>
+</body>
+</html>

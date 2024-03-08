@@ -1,0 +1,184 @@
+@import url('https://fonts.googleapis.com/css2?family=Borel&family=Caprasimo&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Caprasimo', cursive;
+    background-color: #8fbf98;
+    animation: color 10s infinite linear;
+}
+
+@keyframes color {
+    0% {
+        background: #8fbf98;
+    }
+
+    20% {
+        background: #6fb5b5;
+    }
+
+    40% {
+        background: #cbd974;
+    }
+
+    60% {
+        background: #d4bf6b;
+    }
+
+    80% {
+        background: #90cf92;
+    }
+
+    100% {
+        background: #8fbf98;
+    }
+}
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: grid;
+    grid-template-columns: 1fr;
+    place-items: center;
+    width: 100%;
+    height: 65px;
+    background-color: #000;
+    opacity: 0;
+    animation: fadeDown 1s forwards;
+}
+
+@keyframes fadeDown {
+    0% {
+        transform: translateY(-100%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+nav {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1em;
+}
+
+nav a {
+    text-align: center;
+}
+
+nav a:hover {
+    color: #8fbf98;
+}
+
+main {
+    display: grid;
+    place-items: center;
+    padding: 4em 1em;
+}
+
+#location {
+    display: grid;
+    grid-template-columns: 1fr;
+    place-items: center;
+    gap: 1.5em;
+    padding: 2em 0;
+    opacity: 0;
+    animation: fadeUp 1s forwards;
+}
+
+@keyframes fadeUp {
+    0% {
+        transform: translateY(100%);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+h1 {
+    font-size: 2.5rem;
+}
+
+h2 {
+    font-family: 'Borel', cursive;
+    border-top: 3px dashed #000;
+    border-bottom: 3px dashed #000;
+    padding-top: .5em;
+}
+
+h3 {
+    margin-top: -1em;
+    color: #666;
+}
+
+a {
+    text-decoration: none;
+    color: #fff;
+    cursor: pointer;
+    transition: .3s;
+}
+
+section a {
+    font-size: 1.5rem;
+    color: rgb(222, 115, 66)
+}
+
+section a:hover {
+    color: #fff;
+}
+
+#montroyalLink {
+    display: none;
+}
+
+#map {
+    width: 90vw;
+    height: 40vh;
+    opacity: 0;
+    animation: zoomIn 1s ease-in-out forwards;
+}
+
+@keyframes zoomIn {
+    0% {
+        opacity: 0;
+        transform: scale(0);
+    }
+    
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+@media screen and (min-width: 500px) {
+    nav {
+        gap: 2em;
+    }
+}
+
+@media screen and (min-width: 700px) {
+    #map {
+        width: 80vw;
+        height: 50vh;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    #map {
+        width: 70vw;
+    }
+}
